@@ -14,3 +14,9 @@ services:
     ports: 
       - "$UI_PORT:3000"
     tty: true
+
+  streamer_server:
+    image: maestro_streamer_server:latest
+    ports:
+      - "$STREAMER_PORT:4000"
+    restart: on-failure
